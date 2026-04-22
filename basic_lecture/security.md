@@ -17,3 +17,6 @@
 - 責任追跡性 (Accountability)
 - 信頼性 (Reliability)
 - 否認防止 (Non-repudiation)
+
+# 脆弱性
+ソフトウェアやネットワークにおけるセキュリティ面の欠陥や弱点
