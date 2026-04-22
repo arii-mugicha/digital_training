@@ -14,4 +14,6 @@
 ## セキュリティの7大要素
 セキュリティの3要素に加えて以下の4要素を加える
 - 真正性 (Authenticity)
-- 責任追跡性 
+- 責任追跡性 (Accountability)
+- 信頼性 (Reliability)
+- 否認防止 (Non-repudiation)
