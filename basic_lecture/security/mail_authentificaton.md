@@ -19,3 +19,11 @@ Domain Keys  Identifed Mail
 2. 秘密鍵で署名してメールを送信
 3. 受信者はドメインをもとにDNSサーバに公開鍵を問い合わせ
 4. 署名を公開鍵を用いて復号することで検証
+
+# DMARC
+Domain-based Message Authentification, Reporting, and Comformance
+- SPFやDKIM認証が失敗したときにどのようにそのメールを取り扱うのかを決める仕組み
+
+ ## DMARCの仕組み
+ 1. DNSサーバに**DMARCポリシー**を登録する
+ 2. 認証失敗時にDNSサーバからDMARCポリシーを取得、その後の処理を決定
