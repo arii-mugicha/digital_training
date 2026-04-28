@@ -67,3 +67,10 @@ join
   - 昇順ソート
 - array.sort((a,b) => a.localeCompere(b));
 - array.reduce(func((acc, item) -> return type, init)
+
+
+## Optional Chain
+- obj?.unknown_property
+  - if not-exsist => undifined
+- falsty_value || default => default
+- null/undefined ?? default => default
