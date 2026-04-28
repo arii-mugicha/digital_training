@@ -70,6 +70,47 @@ style
 <link href="style_path_or_url.css" rel="stylesheet">
 ```
 
+## HTML5
+```html
+highright
+<mark></mark>
+abbriviation
+<abbr title="title"></abbr>
+ruby
+<ruby>
+  個人的<rp>(</rp><rt>こじんてき</rt><rp>)</rp>
+</ruby>
+time
+<time datetime="">2017/5/31</time>
+figure
+<figure>
+  <img src="" alt="">
+  <figcaption>explain</figcaption>
+<figure>
+
+input
+<input type="number" min="" max="" step="">
+<input type="email/tel/date">
+
+progress
+<progress value="" max=""></progress>
+
+範囲
+<meter value="" max="" min="" high="" low="">
+
+video
+<video width="" height="" poster="loadingIMGpath" controls autoplay>
+  <source src="videoURL" type="videoType">
+  defualt text
+<video>
+
+audio
+<audio controls>
+  <source src="" type="audioType">
+</audio>
+```
+
+
 ## js
 ```javascript
 <button onclick="alert(`hoge`)">name</button>
