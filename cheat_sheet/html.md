@@ -16,7 +16,8 @@
 ## tag
 ```html
 <tag style = "...">
-<tag style id = "...">  <=> #id {css details} 
+<tag id = "...">  <=> #id {css details}
+<tag class = "...">  <=> .class{css details}
 ```
 
 ## link
@@ -25,4 +26,6 @@ hyperlink
 <a href="url">
 img
 <img src="url">
+style
+<link href="style_path_or_url.css" rel="stylesheet">
 ```
