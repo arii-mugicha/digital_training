@@ -9,8 +9,10 @@ for (let/const element of Iter){}
 ## Objectの要素列挙
 keys
 - Object.keys(object_instance)
+
 values
 - Object.values(object_instance)
+
 entries (list of [value, key])
 - object.entries(object_instance)
 
@@ -61,3 +63,7 @@ join
 - array.find(func(item) -> boolean)
   - extract first element
 - array.findIndex(func(item) -> boolean)
+- array.sort((a,b) => a-b)
+  - 昇順ソート
+- array.sort((a,b) => a.localeCompere(b));
+- array.reduce(func((acc, item) -> return type, init)
