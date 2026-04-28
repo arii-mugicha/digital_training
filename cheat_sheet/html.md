@@ -18,6 +18,24 @@
 <tag style = "...">
 <tag id = "...">  <=> #id {css details}
 <tag class = "...">  <=> .class{css details}
+
+list
+<ul/ol>
+  <li> </li>
+</ul/ol>
+
+table
+<table>
+  <tbody>
+    <tr>:行の作成
+      <td></td> <td></td> 
+    </tr>
+  <tbody>
+</table>
+
+form
+<form method="GET/POST" action="url">
+</form>
 ```
 
 ## link
@@ -25,7 +43,14 @@
 hyperlink
 <a href="url">
 img
-<img src="url">
+<img src="url" alt="explain">
 style
 <link href="style_path_or_url.css" rel="stylesheet">
+```
+
+## js
+```javascript
+<button onclick="alert(`hoge`)">name</button>
+// external file
+<script src="url"></script>
 ```
