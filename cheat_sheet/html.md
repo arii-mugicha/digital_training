@@ -3,12 +3,21 @@
 <!DOCTYPE html>
 
 <html>
-  <header>
+  <head>
     <meta charset="utf-8"> (e.g.)
 
     (<style></style>)
-  </header>
+  </head>
   <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <section>
+        <article></article>
+      </section>
+    </main>
+    <aside></aside>
   </body>
 <html>
 ```
