@@ -45,15 +45,21 @@ tag::before/after{content:"*"}
 ## 雑記
 ```css
 .democlass{
-  backbround:,
-height,
-width,
-padding: top right bottom left, 
-margin: top right bottom left, (auto?)
-display:hide/block,
-font-size:,
-font-family,
-font-weight
+  backbround:color or url("URL"),
+  height,
+  width,
+  padding: top right bottom left, 
+  margin: top right bottom left, (auto?),
+  text-align: center,
+  display:hide/block,
+  color: colorcode,
+  font-size:,
+  font-family,
+  font-weight,
+  text-decoration:underline,
+  border: 1px solid/dotted color,
+  border-radius: 6px,
+
 
 }
 ```
