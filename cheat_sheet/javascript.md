@@ -1,3 +1,51 @@
-切り上げ
-切り捨て
-四捨五入
+切り上げ  
+
+切り捨て  
+四捨五入  
+
+## for-of 構文
+for (let/const element of Iter){}
+
+## Objectの要素列挙
+keys
+- Object.keys(object_instance)
+values
+- Object.values(object_instance)
+entries (list of [value, key])
+- object.entries(object_instance)
+
+## 型変換
+num -> string
+- num.toString()
+- String(num)
+
+string -> num
+- parseInt(str)
+
+num -> boolean
+- Boolean(num)
+
+## 3項演算子
+condition ? true_value : false_value
+
+## switch
+switch (condition) {
+  case conditionアーム1: 処理
+  break;
+}
+
+## JSONと文字列の変換
+JSONオブジェクトを文字列として獲得：JSON.atringify(obj)
+文字列をJSONオブジェクトとして変換：JSON.parse(string)
+
+## list
+clone
+- Array.from(array)
+slice
+- array.slice(start, end);
+search
+- array.indexOf(value);
+- array.lastIndexOf(value);
+- array.includes(value);
+join
+- array.join(concatinater)
