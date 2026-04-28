@@ -36,6 +36,19 @@ table
 form
 <form method="GET/POST" action="url">
 </form>
+
+submit
+<button type="submit">display</button>
+
+input
+<div>
+  <input type="text" name="name">
+  <input type="checkbox" name="name" value="true">
+  <label for="id_value">
+    <input type="xxx" id="id_value" ...>
+  </label>
+</div>
+<textarea></textarea>
 ```
 
 ## link
