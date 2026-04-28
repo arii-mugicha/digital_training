@@ -40,15 +40,18 @@ switch (condition) {
 JSONオブジェクトを文字列として獲得：JSON.atringify(obj)
 文字列をJSONオブジェクトとして変換：JSON.parse(string)
 
-## list
+## array
 clone
-- Array.from(array)  
+- Array.from(array)
+
 slice
-- array.slice(start, end)  
+- array.slice(start, end)
+
 search
 - array.indexOf(value)
 - array.lastIndexOf(value)
-- array.includes(value)  
+- array.includes(value)
+
 join
 - array.join(concatinater)  
 
@@ -74,3 +77,12 @@ join
   - if not-exsist => undifined
 - falsty_value || default => default
 - null/undefined ?? default => default
+
+## string
+- str[index]
+- str.slice(i,j)
+- str.trim()
+- str.replace(before_pattern, after_pattern)
+- str.replace_all(before_pattern, after_pattern)
+- str.toUpperCase()
+- str.split(split_pattern)
