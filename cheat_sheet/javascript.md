@@ -86,3 +86,15 @@ join
 - str.replace_all(before_pattern, after_pattern)
 - str.toUpperCase()
 - str.split(split_pattern)
+
+## class
+- class className{
+    property;
+    #privateProperty = value; // init
+    static sproperty = value;
+    get getterName(){}
+    set setterName(value){}
+    constructor(setValues) {this.value=setValue;}
+  }
+- const instance = new className();
+- instance.constructor.stataicProperty;
