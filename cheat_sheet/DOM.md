@@ -38,7 +38,7 @@ functionを作成したら実行されているのかを確認すること
 クラスリスト
 - element.classList
 - classes.add("className")
-- classes.remove("className")
+- classes.remove("className1", "className2")
 - classes.contains("className")
 - classes.toggle("className") // === add() & remove()
 
