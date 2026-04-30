@@ -11,6 +11,7 @@ functionを作成したら実行されているのかを確認すること
 - const element = domElement.querySelector("tagName.ClassName1#ClassName2"); // 複数のClassNameをすべて持つtag
 - const element = domElement.querySelector(".ClassName"); // 不特定のタグの要素指定
 - const element = domElement.querySelectorAll("tagName.ClassName"); // 深さ優先探索 => NodeList
+- domElement.querySelectorAll(\`input[type='checkbox']\`);
 
 ## 隣接ノード群
 - const childNodes = domElement.childNodes // => arrayLike
