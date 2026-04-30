@@ -1,4 +1,6 @@
 # DOM with JavaSccript
+functionを作成したら実行されているのかを確認すること
+
 ## 基本操作
 - const documentRoot = document;
 - const body = document.body;
@@ -55,3 +57,7 @@
 - ev.currentTarget // 登録された要素
 - ev.stopPropagation() // イベントの伝搬の中断
 - addEventListener(options={capture:true/false}) // キャプチャフェーズ/バブリングフェーズでコールバック実施
+
+### Tips
+すべての子ノードを削除
+- while (parent.firstChild){ parent.removeChild(parent.firstChid)}
