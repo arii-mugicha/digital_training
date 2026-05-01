@@ -89,12 +89,12 @@ join
 
 ## class
 - class className{
-    property;
-    #privateProperty = value; // init
-    static sproperty = value;
-    get getterName(){}
-    set setterName(value){}
-    constructor(setValues) {this.value=setValue;}
+    property;  
+    #privateProperty = value; // init  
+    static sproperty = value;  
+    get getterName(){}  
+    set setterName(value){}  
+    constructor(setValues) {this.value=setValue;}  
   }
 - const instance = new className();
 - instance.constructor.stataicProperty;
