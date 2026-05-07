@@ -71,6 +71,8 @@ LEFT OUTER JOIN left_table.mainkey = right_table.mainkey /* left_tableの行は�
 RIGHT OUTER JOIN left_table.mainkey = right_table.mainkey /* right_tableの行はすべて残す (= RIGHT JOIN)*/
 FULL OUTER JOIN left_table.mainkey = right_table.mainkey /* 結合に一致する条件と、両方のテーブルの行はすべて残す (= FULL JOIN)*/
 CROSS JOIN left_table.mainkey = right_table.mainkey /* 結合条件なく、両方のテーブルの行はすべて残す (ONの条件なしJOINまたは、FROM a.bのように記述)*/
+
+-- WHERE X = SUBQUERY
 ```
 
 ## データ型
