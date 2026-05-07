@@ -62,7 +62,7 @@ SELECT DISTINCT column_name FROM table_name; /* 重複データを除いて抽�
 GROUP BY grouping_column1, grouping_column2;
 
 -- JOIN 結合
-SELECT column_names FROM joined_table_name
+SELECT joined_table_name.column_name, join_table_name.column_name FROM joined_table_name
 JOIN join_table_name ON join_table_mainkey = joined_table_mainkey
 /* JOIN: FROM句の一部
 中間テーブルを用いて複数のテーブルをJOINで連続して結合可能 */
