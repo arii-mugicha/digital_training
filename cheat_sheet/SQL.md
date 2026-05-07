@@ -7,10 +7,10 @@
 /*comment out*/
 -- also comment out
 -- 作成
-Create Table{
+Create Table table_name(
   column_name datatype,
   column_name2 datatype
-}
+)
 
 -- データ挿入
 INSERT INTO table_name (column1, column2, ...)
@@ -24,8 +24,9 @@ SELECT column_name1, column_name2 FROM table_name
 [ORDERED BY sort];
 
 -- 更新
-UPDATE table_name SET column_name = value;
-UPDATE table_name SET column_name = column_name + 1;
+UPDATE table_name SET column_name = value [WHERE句];
+UPDATE table_name SET column_name = value [WHERE句];
+UPDATE table_name SET column1 = v1, column2 = v2;
 
 -- 削除
 DELETE from column_name;
@@ -41,6 +42,13 @@ condition1 AND condition2;
 condition1 OR condition2;
 BETWEEN lower_bound AND upper_bound; /* lower_bound以上upper_bound以下の条件節 */
 value IN (v1, v2, v3);
+value IS NOT NULL /* 値が存在している=空欄でない */
+LIKE 'SearchString';
+-- --ワイルドカード
+'_' /* 任意の1文字 */
+'%' /* 任意の0文字以上の文字列 */
+
+
 ```
 
 ## データ型
