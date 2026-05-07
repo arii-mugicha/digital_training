@@ -29,7 +29,7 @@ UPDATE table_name SET column_name = value [WHERE句];
 UPDATE table_name SET column1 = v1, column2 = v2;
 
 -- 削除
-DELETE from column_name;
+DELETE from column_name [WHERE句];
 
 -- WHERE句
 SELECT column_name FROM table_name
@@ -48,6 +48,11 @@ LIKE 'SearchString';
 '_' /* 任意の1文字 */
 '%' /* 任意の0文字以上の文字列 */
 
+-- ソート
+SELECT column_name FROM table_name
+ORDER BY sortby_column [ASC(昇順) DEsC(降順)];
+ORDER BY sort1 [ASC/DESC], sort2 [ASC/DESC]; // sort1が同じ時にsort2でソート
+ORDER BY sortby_column LIMIT; //上限表示
 
 ```
 
