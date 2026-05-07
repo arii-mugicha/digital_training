@@ -55,11 +55,22 @@ ORDER BY sort1 [ASC/DESC], sort2 [ASC/DESC]; /* sort1が同じ時にsort2でソ�
 ORDER BY sortby_column LIMIT limit OFFSET skip; /* 上限表示 */
 
 -- GROUPING 集計関数
-SELECT COUNT(age) [AS alias] FROM table_name;
+SELECT COUNT(age) [AS rename] FROM table_name;
 SELECT MAX(age) , MIN(age) FROM table_name;
 SELECT SUM(age) , AVG(age), ROUND(AVG(age), display_digit) FROM table_name;
 SELECT DISTINCT column_name FROM table_name; /* 重複データを除いて抽出 */
 GROUP BY grouping_column1, grouping_column2;
+
+-- JOIN 結合
+SELECT column_names FROM joined_table_name
+JOIN join_table_name ON join_table_mainkey = joined_table_mainkey
+/* JOIN: FROM句の一部
+中間テーブルを用いて複数のテーブルをJOINで連続して結合可能 */
+INNER JOIN left_table.mainkey = right_table.mainkey /* 両方で結合条件に一致するもののみ残す (= JOIN) */
+LEFT OUTER JOIN left_table.mainkey = right_table.mainkey /* left_tableの行はすべて残す (= LEFT JOIN)*/
+RIGHT OUTER JOIN left_table.mainkey = right_table.mainkey /* right_tableの行はすべて残す (= RIGHT JOIN)*/
+FULL OUTER JOIN left_table.mainkey = right_table.mainkey /* 結合に一致する条件と、両方のテーブルの行はすべて残す (= FULL JOIN)*/
+CROSS JOIN left_table.mainkey = right_table.mainkey /* 結合条件なく、両方のテーブルの行はすべて残す (ONの条件なしJOINまたは、FROM a.bのように記述)*/
 ```
 
 ## データ型
