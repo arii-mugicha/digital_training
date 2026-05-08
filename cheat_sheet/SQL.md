@@ -167,11 +167,47 @@ CREATE TABLE table_name(
 );
 ```
 
+## index
+``` SQL
+-- UNIQUE 指定で自動的にINDEX作成
+CREATE INDEX index_name ON table_name (column_nmae)
+DROP INDEX index_name
+-- クエリの計画
+EXPLAIN QUERY PLAN (query);
+/*
+output: detail
+  SCAN table_namr: 全件サーチ
+  SEARCH table_name USING INDEX index_columns: インデックスサーチ
+*/
+
+-- PostgreSQL
+EXPLAIN ANALYZE query...
+```
+
+## 式と関数
+式内で四則演算は可能
+```SQL
+-- cAST
+SELECT CAST(column_name AS TYPE) FROM ...;
+/* CAST TYPE: NONE, TEXT, REAL, INTEGER, NUMERIC*/
+-- COALESCE
+SELECT COALESCE(values, default_value)
+-- NULLIF
+NULLIF(v1, v2) /* if v1==v2 return NULL, else return v1 */
+
+-- CASE
+CASE column
+  WHEN case1_value THEN return1
+  WHEN case2_value THEN return2
+  ...
+  ELSE return_else_value /* NO ELSE -> return NULL */
+END  
+```
 
 ## Tips
 ```SQL
 -- INSERT + SELECT
-INSERT INTO table (columns)
+INSERT INTO table (columns) /* 最初のカラムから順に評価する */
 SELECT columns,...
 WHERE
 ```
