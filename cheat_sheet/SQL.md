@@ -166,3 +166,12 @@ CREATE TABLE table_name(
   ...
 );
 ```
+
+
+## Tips
+```SQL
+-- INSERT + SELECT
+INSERT INTO table (columns)
+SELECT columns,...
+WHERE
+```
