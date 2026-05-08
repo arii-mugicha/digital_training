@@ -45,4 +45,29 @@ instanceName.constructor.staticField; // instanceName.constructor === ClassName
 
 ```
 
+## module定義
+```JavaScript
+// Objectとしてグローバル変数にまとめる
+var myModule = {
+  functionName(){
+    // method progress
+  }
+}
+// call module
+myModule.moduleFunction()
+
+// call from another file
+window.moduleName();
+
+// export to another file
+export { ObjectName };
+export const constantValue = value;
+export class ExportClass{};
+// importfrom another file
+import { moduleName } from 'moduleFilePath';
+
+// CommonJS export
+module.exports = objectName;
+```
+
 ## prototypeベース記法
