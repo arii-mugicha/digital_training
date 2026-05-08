@@ -129,3 +129,9 @@ Object.defineProperty(ClassName.prototype, propertyName{
   }
 });
 ```
+
+## 参照
+``` JavaScript
+-- Premitive Type は値渡し
+-- Object は参照渡し
+```
