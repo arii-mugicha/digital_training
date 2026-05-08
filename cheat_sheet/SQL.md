@@ -201,7 +201,50 @@ CASE column
   WHEN case2_value THEN return2
   ...
   ELSE return_else_value /* NO ELSE -> return NULL */
-END  
+END
+
+CASE
+  WHEN condition THEN return1
+  ...
+END
+
+-- concat string
+v1 || v2 -> v1v2
+
+LENGTH(v)
+REPLACE(column_name, before, after)
+SUBSTR(column, start_index, end_index)
+[L/R]TRIM(column)
+Upper/Lower(column)
+ABS(num)
+POWER(num, power_num)
+MOD(num, modular)
+CIEL/FLOOR(num)
+TRUNC(num) /* 整数部分 */
+RANDOM()
+
+-- datetime
+CURRENT_TIMESTAMP /* -> YYYY-MM-DD HH:MM:SS*/
+CURRENT_DATE /* -> YYYY-MM-DD*/
+-- 第二引数を取れる
+DATETIME(date_string) /* -> YYYY-MM-DD HH:MM:SS (nowを使える)*/
+DATE(date_string) /* -> YYYY:MM:DD */
+TIME(time_string) /* -> HH:MM:SS (time_stringなしで現在時刻)*/
+/*
+第二引数
+'localtime'
+'+3 hour'
+'start of month'
+*/
+STRFTIME('%Y...', string)
+```
+
+## CHECK 制約
+``` SQL
+CREATE TABLE table_name(
+  column_name datatype CHECK (condition)
+  column_name datatype CONSTRAINT check_name CHECK (condition)
+) 
 ```
 
 ## Tips
