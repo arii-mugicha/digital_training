@@ -68,6 +68,64 @@ import { moduleName } from 'moduleFilePath';
 
 // CommonJS export
 module.exports = objectName;
+// CommonJS import
+Const {ObjectName} = require('modulePath')
+```
+
+## クラス継承 Class Inheritance
+```JavaScript
+class InheritedClassName extends InheritClassName{
+  constructor(values){
+    super(values);
+  }
+
+  newField;
+  newMethod(){}
+
+  overrideFunction(values){
+    super.overridefunstion();
+    // other procudures
+  }
+}
 ```
 
 ## prototypeベース記法
+```
+function ClassName(values){
+  this.fieldName = value;
+  this.methodName = functin(values) {
+    // method progress
+  }
+}
+
+// create & access instance
+const instanceName = new ClassName(values);
+instanceName.fieldName;
+
+// define by prototype
+ClassName.prototype.methodName = functino(){
+  // method progress
+}
+
+// override instance
+instance.overrideMethod = function(values){}; // インスタンスのみoverride
+
+
+// inheritance
+InheritedClass.prototype = Object.create(InheritClass.prototype)
+// constructor inheritance
+function InheritedClassName(values){
+  InheritClassName.call(this, values);
+}
+// override class
+InheritedClassName.prototype.inheritMethodName = function(values){};
+// getter/setter
+Object.defineProperty(ClassName.prototype, propertyName{
+  get(){
+    return return_value;
+  },
+  set(value){
+    // setter
+  }
+});
+```
