@@ -132,4 +132,24 @@ CREATE TABLE table_name(
   UNIQUE KEY (column1, column2) /* Composite Unique Key */
 )
 
+-- Foreign Key
+pragma foreign_key = ON; /* 外部キー使用可能にするコマンド */
+CREATE TABLE table_name (
+  column_name datatype,
+  ...
+  FOREIGN KEY (column_name) REFERENCES refered_table_name (reference_key_column)
+)
+
+CREATE TABLE table_name (
+  column_name datatype,
+  ...
+  FOREIGN KEY (column_name) REFERENCES refered_table_name (reference_key_column)
+    ON XXXX(OPERATION) YYYY(reference operation)
+)
 ```
+|参照操作名|内容|
+|----|----|
+|RESTRICT|参照整合性を満たさない操作の禁止|
+|NO ACTION|RESTRICTと同様、ただしトランザクション後に検証|
+|SET NULL| 参照カラムにNULLを設定|
+|CASCADE|参照先が更新/削除されたときに参照先も更新/削除する|
