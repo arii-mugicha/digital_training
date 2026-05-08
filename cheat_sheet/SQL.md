@@ -243,6 +243,7 @@ STRFTIME('%Y...', string)
 ``` SQL
 CREATE TABLE table_name(
   column_name datatype CHECK (condition)
+  column_name datatype DEFAULT default_value CHECK (condition)
   column_name datatype CONSTRAINT check_name CHECK (condition)
 ) 
 ```
