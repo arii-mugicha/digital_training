@@ -190,7 +190,7 @@ EXPLAIN ANALYZE query...
 -- cAST
 SELECT CAST(column_name AS TYPE) FROM ...;
 /* CAST TYPE: NONE, TEXT, REAL, INTEGER, NUMERIC*/
--- COALESCE
+-- COALESCE: NULLの時に置換
 SELECT COALESCE(values, default_value)
 -- NULLIF
 NULLIF(v1, v2) /* if v1==v2 return NULL, else return v1 */
