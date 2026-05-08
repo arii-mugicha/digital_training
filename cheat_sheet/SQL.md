@@ -153,3 +153,16 @@ CREATE TABLE table_name (
 |NO ACTION|RESTRICTと同様、ただしトランザクション後に検証|
 |SET NULL| 参照カラムにNULLを設定|
 |CASCADE|参照先が更新/削除されたときに参照先も更新/削除する|
+
+```SQL
+-- NOT NULL
+CREATE TABLE table_nama(
+  column datatype NOT NULL,
+  ...
+);
+-- DEFAULT VALUE
+CREATE TABLE table_name(
+  column datatype DEFAULT default_value,
+  ...
+);
+```
