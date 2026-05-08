@@ -105,8 +105,9 @@ join
 const date = new Date();
 const date = new Date(year, month, date, hour, minute, second); // month は 0 スタート
 const date = new Date(parseFormatString); // can attach offset ('+09:00')
-// create
+// parse
 dateObject.toString();
 dateObject.toDateString(); // 日付部分のみ文字列
-
+dateObject.toISOString();
+// get 
 ```
