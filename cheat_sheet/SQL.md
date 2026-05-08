@@ -104,3 +104,32 @@ FROM (SUBQUERY) /* サブクエリを一時的なテーブルとして作成 */
 |varchar(max_length)|'aaa'|
 |date|'2020-01-01'('YYYY-MM-DD')|
 |datetime|'2020-01-01 12:34:56'('YYYY-MM-DD HH:MM:SS')|
+
+## 設計
+```SQL
+-- primary key
+Create Table table_name(
+  primary_key_name datatype PRIMARY KEY, /* primary key constraint */
+)
+CREATE TABLE table_name(
+  primary_key_name datatype PRIMARY KEY AUTOINCREMENT, /* 自動的に生成 DBによって異なる */
+)
+CREATE TABLE table_name(
+  column1 datatype,
+  column2 datatype,
+  ... ,
+  PRIMARY KEY (column1, column2) /* Composite Primary Key */
+)
+
+-- Unique Key
+CREATE TABLE table_name(
+  column datatype UNIQUE /* 値が重複しない、ただしNULLを許容 */
+)
+CREATE TABLE table_name(
+  column1 datatype,
+  column2 datatype,
+  ...,
+  UNIQUE KEY (column1, column2) /* Composite Unique Key */
+)
+
+```
