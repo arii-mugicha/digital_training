@@ -90,7 +90,7 @@ class InheritedClassName extends InheritClassName{
 ```
 
 ## prototypeベース記法
-```
+```JavaScript
 function ClassName(values){
   this.fieldName = value;
   this.methodName = functin(values) {
