@@ -53,20 +53,21 @@ JSON.parse(string); // 文字列をJSONオブジェクトとして変換
 ```
 
 ## array
-clone
-- Array.from(array)
+```JavaScript
+// clone
+Array.from(array);
 
-slice
-- array.slice(start, end)
+// slice
+array.slice(start, end);
 
-search
-- array.indexOf(value)
-- array.lastIndexOf(value)
-- array.includes(value)
+// search
+array.indexOf(value);
+array.lastIndexOf(value);
+array.includes(value);
 
-join
-- array.join(concatinater)  
-
+// join
+array.join(concatinater)  
+```
 
 ## 高階関数
 ```javascript
