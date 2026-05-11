@@ -105,6 +105,7 @@ join
 const date = new Date();
 const date = new Date(year, month, date, hour, minute, second); // month は 0 スタート
 const date = new Date(parseFormatString); // can attach offset ('+09:00')
+const date = new Dare(dateObject.getTime());
 
 // parse
 dateObject.toString();
@@ -114,9 +115,17 @@ dateObject.toISOString();
 // get
 dateObject.getFullYear()
 dateObject.getDate() // etc.
+dateObject.getTime(); // get Epoch Time (millisecond)
 
 // set
 dateObject.setDate(value);
-dateObject.getTime(); // 
+
+// comparsion
+dateObject1 < dateObejct2;
+dateObject1.getTime() === dateObject2.getObject(); // eq must be epoch time
+dateObject === dateObeject;
+
+// diff (milliseconds)
+milliseconds = dateObject1 - dateObject2;
 
 ```
