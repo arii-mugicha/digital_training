@@ -10,41 +10,47 @@ instance = new Set(); // Set
 ```
 
 ## for-of 構文
+```JavaScript
 for (let/const element of Iter){}
-
+```
 ## Objectの要素列挙
-keys
-- Object.keys(object_instance)
-
-values
-- Object.values(object_instance)
-
-entries (list of [value, key])
-- object.entries(object_instance)
+```JavaScript
+Object.keys(object_instance);
+Object.values(object_instance);
+object.entries(object_instance); // list of [value, key]
+```
 
 ## 型変換
-num -> string  
-- num.toString()
-- String(num)
+```JavaScript
+// num -> string  
+num.toString();
+String(num);
 
-string -> num  
-- parseInt(str)
+//string -> num  
+parseInt(str);
 
-num -> boolean  
-- Boolean(num)
+// num -> boolean  
+Boolean(num);
+```
 
 ## 3項演算子
+```JavaScript
 condition ? true_value : false_value
+```
 
 ## switch
+```JavaScript
 switch (condition) {  
   case conditionアーム1: 処理  
   break;  
 }
+```
 
 ## JSONと文字列の変換
-JSONオブジェクトを文字列として獲得：JSON.atringify(obj)
-文字列をJSONオブジェクトとして変換：JSON.parse(string)
+```JavaScript
+JSON.atringify(obj); // JSONオブジェクトを文字列として獲得
+JSON.parse(string); // 文字列をJSONオブジェクトとして変換
+```
 
 ## array
 clone
