@@ -51,23 +51,31 @@ classes.remove("className1", "className2");
 classes.contains("className");
 classes.toggle("className"); // === add() & remove()
 ```
+
 ## Event
-- element.addEventListener("EventName", callbackfunction, options)
- - options = {once: true}
- - btn.addEventListener("click/mouseover")
- - document.addEventListener("DOMContentLoaded", callbackFunction)
-- element.removeEventListener("event", callbackfunction)
-- function callback(ev) { ev.preventDefault; } // 最初の読み込み時のEvent発火を無視
-- element1.value // input要素の値を取得
-- element2.checked // 二値系の値を取得
-- document.forms.formNameAttributeValue
-- form.name.value
-- form.type.value
-- ev.target // イベントの発生源
-- ev.currentTarget // 登録された要素
-- ev.stopPropagation() // イベントの伝搬の中断
-- addEventListener(options={capture:true/false}) // キャプチャフェーズ/バブリングフェーズでコールバック実施
+```JavaScript
+element.addEventListener("EventName", callbackfunction, options);
+// options = {once: true}
+btn.addEventListener("click/mouseover");
+document.addEventListener("DOMContentLoaded", callbackFunction);
+element.removeEventListener("event", callbackfunction);
+function callback(ev) { ev.preventDefault; } // 最初の読み込み時のEvent発火を無視
+element1.value; // input要素の値を取得
+element2.checked; // 二値系の値を取得
+document.forms.formNameAttributeValue;
+form.name.value;
+form.type.value;
+ev.target; // イベントの発生源
+ev.currentTarget; // 登録された要素
+ev.stopPropagation(); // イベントの伝搬の中断
+addEventListener(options={capture:true/false}); // キャプチャフェーズ/バブリングフェーズでコールバック実施
+```
 
 ### Tips
 すべての子ノードを削除
-- while (parent.firstChild){ parent.removeChild(parent.firstChid)}
+```
+while (parent.firstChild){
+ parent.removeChild(parent.firstChid);
+ // parent.firstChild.remove();
+}
+```
