@@ -62,27 +62,33 @@ join
 - array.join(concatinater)  
 
 
-## higher-order function
-- array.some(func(item) -> boolean) -> boolean
-- array.every(func(item) -> boolean) -> boolean
-- array.forEach((item, index) => {処理})
-- array.filtrer(func(item) -> boolean)
-  - 真のもののみを抽出した配列になる
-- array.map(func(item) -> return_type)
-- array.find(func(item) -> boolean)
-  - extract first element
-- array.findIndex(func(item) -> boolean)
-- array.sort((a,b) => a-b)
-  - 昇順ソート
-- array.sort((a,b) => a.localeCompere(b));
-- array.reduce(func((acc, item) -> return type, init)
-
+## 高階関数
+```javascript
+(items) => {process};
+```
+```javascript
+array.some(func(item) -> boolean); // func:trueなるものが存在するかのbooleanを返戻
+array.every(func(item) -> boolean); // func:trueなるものがすべてかbooleanを返戻
+array.forEach((item, index) => {
+    // process
+  }
+);
+array.filtrer(func(item) -> boolean); // trueなる要素を抽出した配列を返戻
+array.map(func(item) -> return_type); // 各要素を変換して配列にする
+array.find(func(item) -> boolean); // trueなる最初の要素を抽出
+array.findIndex(func(item) -> boolean);
+array.sort((a,b) => a-b); // 昇順ソート
+array.sort((a,b) => a.localeCompere(b)); // 文字列ソート
+// ソートは高階関数なしでも動く
+array.reduce(func((acc, item) -> return type, init); // fold
+```
 
 ## Optional Chain
-- obj?.unknown_property
-  - if not-exsist => undifined
-- falsty_value || default => default
-- null/undefined ?? default => default
+``` JavaScript
+obj?.unknown_property; // unknown_propertyが存在しない時、undifinedを返戻する
+falsty_value || default; // || 演算子によってfalsty_valueであるときにdefaultを返戻 
+null/undefined ?? default; // return default
+```
 
 ## 文字列操作
 ``` JavaScript
