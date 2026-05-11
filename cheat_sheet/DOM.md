@@ -2,32 +2,38 @@
 functionを作成したら実行されているのかを確認すること
 
 ## 基本操作
-- const documentRoot = document;
-- const body = document.body;
-- const idSearch = domElement.getElementById("idName");
-- const tagSearch = domElement.getElementByTagName("TagName"); // => arrayLikeObject
-- cosnt classSearch = domElment.getElementsByClassName("ClassName");
-- const element = domElement.querySelector("tagName.ClassName"); // 深さ優先探索 ClassNameを持つ最初のtag
-- const element = domElement.querySelector("tagName.ClassName1#ClassName2"); // 複数のClassNameをすべて持つtag
-- const element = domElement.querySelector(".ClassName"); // 不特定のタグの要素指定
-- const element = domElement.querySelectorAll("tagName.ClassName"); // 深さ優先探索 => NodeList
-- domElement.querySelectorAll(\`input[type='checkbox']\`);
+```JavaScript
+const documentRoot = document;
+const body = document.body;
+const idSearch = domElement.getElementById("idName");
+const tagSearch = domElement.getElementByTagName("TagName"); // => arrayLikeObject
+const classSearch = domElment.getElementsByClassName("ClassName");
+const element = domElement.querySelector("tagName.ClassName"); // 深さ優先探索 ClassNameを持つ最初のtag
+const element = domElement.querySelector("tagName.ClassName1#ClassName2"); // 複数のClassNameをすべて持つtag
+const element = domElement.querySelector(".ClassName"); // 不特定のタグの要素指定
+const element = domElement.querySelectorAll("tagName.ClassName"); // 深さ優先探索 => NodeList
+domElement.querySelectorAll(\`input[type='checkbox']\`);
+```
 
 ## 隣接ノード群
-- const childNodes = domElement.childNodes // => arrayLike
-- const parentNode = domelement.parentNode
-- const nextItem = item.nextSibling // 次の兄弟要素
-- node.NodeType = Node.ELEMENT_NODE/TEXT_NODE/COMMENT_NODE (1/3/8)
-- domElement.textContent // プレーンテキストの抽出 すべての子孫ノードの要素を結合した形
-- domnode.textContent
+```JavaScript
+const childNodes = domElement.childNodes; // => arrayLike
+const parentNode = domelement.parentNode;
+const nextItem = item.nextSibling; // 次の兄弟要素
+node.NodeType = Node.ELEMENT_NODE/TEXT_NODE/COMMENT_NODE; // (1/3/8)
+domElement.textContent; // プレーンテキストの抽出 すべての子孫ノードの要素を結合した形
+domNode.textContent;
+```
 
 ## 生成
- - document.createElement("tag")
- - document.createTextNode("text")
- - element.appendChild(childElement)
- - const removeNode = element.removechild(removeElement)
- - element.insertBefore(element, currentNode)
- - element.insertBefore(element, currentNode.nextSibling) // 直後
+```
+document.createElement("tag");
+document.createTextNode("text");
+element.appendChild(childElement);
+const removeNode = element.removechild(removeElement);
+element.insertBefore(element, currentNode);
+element.insertBefore(element, currentNode.nextSibling); // 直後
+```
 
 ## 属性取得
 - element.getAtteibute()
