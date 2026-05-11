@@ -59,6 +59,7 @@ tag::before/after{content:"*"}
   text-decoration:underline;
   border: 1px solid/dotted color;
   border-radius: 6px;
+  line-height: 1.5; // フォントからの倍率
 }
 ```
 
