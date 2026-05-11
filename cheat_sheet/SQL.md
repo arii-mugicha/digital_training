@@ -72,7 +72,7 @@ RIGHT OUTER JOIN left_table.mainkey = right_table.mainkey /* right_tableの行�
 FULL OUTER JOIN left_table.mainkey = right_table.mainkey /* 結合に一致する条件と、両方のテーブルの行はすべて残す (= FULL JOIN)*/
 CROSS JOIN left_table.mainkey = right_table.mainkey /* 結合条件なく、両方のテーブルの行はすべて残す (ONの条件なしJOINまたは、FROM a.bのように記述)*/
 
--- WHERE X = SUBQUERy
+-- WHERE X = SUBQUERY
 SELECT column_name FROM table_name 
 WHERE column_name = (
   /* subquery */
