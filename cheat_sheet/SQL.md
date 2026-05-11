@@ -7,14 +7,14 @@
 /*comment out*/
 -- also comment out
 -- 作成
-Create Table table_name(
+CREATE TABLE table_name(
   column_name datatype,
   column_name2 datatype
 )
 
 -- データ挿入
 INSERT INTO table_name (column1, column2, ...)
-Values (value1, value2, ...);
+VALUES (value1, value2, ...);
 
 -- データの取得
 SELECT column_name1, column_name2 FROM table_name
