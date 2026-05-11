@@ -36,18 +36,21 @@ element.insertBefore(element, currentNode.nextSibling); // 直後
 ```
 
 ## 属性取得
-- element.getAtteibute()
-- element.setAttribute("elementName", elementValue)
-- element.hasAttribute("elementName")
-- element.removeAttribute("elementName")
+``` JavaScript
+element.getAtteibute();
+element.setAttribute("elementName", elementValue);
+element.hasAttribute("elementName");
+element.removeAttribute("elementName");
+```
 
 クラスリスト
-- element.classList
-- classes.add("className")
-- classes.remove("className1", "className2")
-- classes.contains("className")
-- classes.toggle("className") // === add() & remove()
-
+``` JavaScript
+element.classList;
+classes.add("className");
+classes.remove("className1", "className2");
+classes.contains("className");
+classes.toggle("className"); // === add() & remove()
+```
 ## Event
 - element.addEventListener("EventName", callbackfunction, options)
  - options = {once: true}
