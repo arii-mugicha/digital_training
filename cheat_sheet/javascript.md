@@ -3,6 +3,12 @@
 切り捨て  
 四捨五入  
 
+## 初期化
+```
+instance = {}; // Object
+instance = new Set(); // Set
+```
+
 ## for-of 構文
 for (let/const element of Iter){}
 
