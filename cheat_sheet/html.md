@@ -64,6 +64,7 @@ input
 ```html
 hyperlink
 <a href="url">
+<a href="url" target="_blank"></a> <!-- 新しいタブで開く -->
 img
 <img src="url" alt="explain">
 style
