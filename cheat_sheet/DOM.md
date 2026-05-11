@@ -73,7 +73,7 @@ addEventListener(options={capture:true/false}); // キャプチャフェーズ/�
 
 ### Tips
 すべての子ノードを削除
-```
+```JavaScript
 while (parent.firstChild){
  parent.removeChild(parent.firstChid);
  // parent.firstChild.remove();
