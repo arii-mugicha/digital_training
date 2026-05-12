@@ -39,9 +39,9 @@
   ネットワークに接続される機器の時刻を同期する
 
 ### 電子メールに関するプロトコル
-- SMTP (Simple Mail Transfer Protocol)
+- SMTP (Simple Mail Transfer Protocol)  
   電子メールの配送
-- POP (Post Officec Protocol)
+- POP (Post Officec Protocol)  
   メールサーバの電子メールを端末にコピー
-- IMAP (Internet Message Access Protocol)
+- IMAP (Internet Message Access Protocol)  
   メールサーバに届いた電子メールを直接参照する
