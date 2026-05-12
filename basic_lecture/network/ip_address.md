@@ -25,3 +25,15 @@ IPアドレスとの論理計算を行うことで特定の値を取得するこ
 
 ## CIDR (Class Inter-Domain Routing)
 IPアドレスの規模を動的に割り当てる方式
+
+# IPアドレスの枯渇対策
+- NAT (Network Address Tanslation)
+  プライベートIPアドレスをグローバルIPアドレスに一対一変換する方法
+- NAPT (Network Address Port Translation)
+  プライベートIPアドレスをポート番号として、グローバルIPアドレスに変換する方法
+- IPv6アドレス
+  - 16bit区切りの128bitで表す
+  - 16進数標記で`:`区切り  
+  - プレフィックス標記
+  - \:0\:は前方省略ですべて::に変更可能
+  - 暗号化機能をもつ
