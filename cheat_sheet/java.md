@@ -33,3 +33,12 @@ str 1 + str2;
 |--|--|
 |整数値|`byte`, `short`, `int`, `long`|
 |実数地|`double`, `float`|
+|真偽値|`boolean`|
+
+# キャスト
+```java
+Integer.parseInt(value);
+Double.parseDouble(value);
+Boolean.parseBoolean(value);
+(datatype)value
+```
