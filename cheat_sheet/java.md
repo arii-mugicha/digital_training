@@ -49,3 +49,11 @@ Integer.toString(int);
 // comparsion string
 str1.equals(str2);
 ```
+
+# メソッド定義
+```java
+datatype methodName(datatype argument){
+  // process
+  return data;
+}
+```
