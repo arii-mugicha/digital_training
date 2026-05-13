@@ -41,4 +41,11 @@ Integer.parseInt(value);
 Double.parseDouble(value);
 Boolean.parseBoolean(value);
 (datatype)value
+Integer.toString(int);
+```
+
+# 条件分岐
+```java
+// comparsion string
+str1.equals(str2);
 ```
