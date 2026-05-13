@@ -31,4 +31,5 @@ str 1 + str2;
 # データ型
 |データ型||
 |--|--|
-|整数値|`byte`, `short`, `ont`, `long`|
+|整数値|`byte`, `short`, `int`, `long`|
+|実数地|`double`, `float`|
