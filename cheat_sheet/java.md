@@ -17,12 +17,20 @@ import java.util.Scanner;
 Scanner scanner = new Scanner(System.in);
 String recieved = scanner.nextLine();
 scanner.close():
+
+// nextInt
+scanner.nextInt(); // 次の半角スペースまたはか改行までを区切りとしてintで受ける
 ```
 
 # 記述
 ```java
 // 宣言
 datatype variable = value;
+
+// array
+datatype[] variable = new datatype[length];
+datatype[] variable = new datatype[] {arg1, arg2, ...};
+int length = array.length;
 
 //文字列結合
 str 1 + str2;
@@ -55,5 +63,13 @@ str1.equals(str2);
 datatype methodName(datatype argument){
   // process
   return data;
+}
+```
+
+# for
+```java
+for (int i=init; condition; increment){}
+for (datatype arg : array){
+  // process
 }
 ```
