@@ -18,7 +18,7 @@ Scanner scanner = new Scanner(System.in);
 String recieved = scanner.nextLine();
 scanner.close():
 
-// nextInt
+// nextInt/ nextDouble/ next
 scanner.nextInt(); // 次の半角スペースまたはか改行までを区切りとしてintで受ける
 ```
 
@@ -34,6 +34,10 @@ int length = array.length;
 
 //文字列結合
 str 1 + str2;
+
+// 文字列分割
+string.split("sepalater");
+string.split(""); // 一文字ずつ
 ```
 
 # データ型
@@ -72,4 +76,10 @@ for (int i=init; condition; increment){}
 for (datatype arg : array){
   // process
 }
+```
+
+# math
+```java
+import java.lang.Math;
+Math.ciel(num)
 ```
