@@ -13,9 +13,22 @@ System.out.println(String);
 # 標準入力
 ```java
 import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+String recieved = scanner.nextLine();
+scanner.close():
 ```
 
-# 宣言
+# 記述
 ```java
+// 宣言
 datatype variable = value;
+
+//文字列結合
+str 1 + str2;
 ```
+
+# データ型
+|データ型||
+|--|--|
+|整数値|`byte`, `short`, `ont`, `long`|
