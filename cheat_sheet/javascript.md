@@ -66,7 +66,10 @@ array.lastIndexOf(value);
 array.includes(value);
 
 // join
-array.join(concatinater)  
+array.join(concatinater)
+
+// delete
+array.splice(index, number);
 ```
 
 ## 高階関数
