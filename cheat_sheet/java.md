@@ -83,3 +83,33 @@ for (datatype arg : array){
 import java.lang.Math;
 Math.ciel(num)
 ```
+
+# Class
+```java
+// enum
+public enum EnumName{
+  arm1, arm2, ...;
+  // can define methods
+}
+
+// class
+public class ClassName{
+  // field
+  private/public datatype fieldname;
+  // constructor
+  private/public ClassName(values){
+    // process
+  }
+  // parse
+  private/public ClassName anotherConstructorName(values){}
+}
+
+// instance
+ClassName instance = new ClassName(values);
+ClassName instance = new ClassName.anotherConstructorName(values);
+
+// inheritance
+public class NewClassName extends Inherit{
+  // same as others
+}
+```
