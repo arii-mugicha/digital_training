@@ -54,6 +54,8 @@ Double.parseDouble(value);
 Boolean.parseBoolean(value);
 (datatype)value
 Integer.toString(int);
+String s = String.valueOf(value);
+Character.geteNumericValue();
 ```
 
 # 条件分岐
