@@ -50,6 +50,7 @@ string.split(""); // 一文字ずつ
 # キャスト
 ```java
 Integer.parseInt(value);
+int i = Integer.valueOf(value); // Integer型を返戻しUnboxingする 型の変換を自動的に行う
 Double.parseDouble(value);
 Boolean.parseBoolean(value);
 (datatype)value
