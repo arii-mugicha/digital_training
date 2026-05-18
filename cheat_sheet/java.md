@@ -108,6 +108,9 @@ public class ClassName{
 
   // statics
   static Datatype variable = value; // インスタンスを作成せずにアクセス可能なクラスフィールド
+
+  // final
+  final type valiable = ...; // 不変変数
 }
 
 // instance
