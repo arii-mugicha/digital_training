@@ -100,7 +100,7 @@ public class ClassName{
   // field
   private/public datatype fieldname;
   // constructor
-  private/public ClassName(values){
+  private/public ClassName(classtypes values){
     // process
   }
   // parse
