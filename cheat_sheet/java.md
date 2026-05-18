@@ -119,6 +119,10 @@ ClassName instance = new ClassName.anotherConstructorName(values);
 
 // inheritance
 public class NewClassName extends Inherit{
+  super(); // 親クラスコンストラクタ
+  super.parentMethod();
+  protected Datatype methosName(values){} // パッケージ内または継承クラスでのみ呼び出すことが可能
+  @Override // override parent's method
   // same as others
 }
 ```
