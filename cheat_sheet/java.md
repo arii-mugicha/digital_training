@@ -132,3 +132,22 @@ public class NewClassName extends Inherit{
 // 可変長の引数
 public/private return_type functionName(Datatype... values){}
 ```
+
+# enum
+```java
+enum EnumName{
+  arm1,...
+}
+
+// compare
+enumInstance.compareTo(anotherEnumInstance); // -> -int, 0, int
+
+// get defined order
+EnumType.ArmName.ordinal();
+
+// get all values
+Enumtype.values();
+
+// construct
+EnumName.valueOf("ArmName");
+```
