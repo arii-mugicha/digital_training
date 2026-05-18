@@ -122,3 +122,9 @@ public class NewClassName extends Inherit{
   // same as others
 }
 ```
+
+# method
+```java
+// 可変長の引数
+public/private return_type functionName(Datatype... values){}
+```
