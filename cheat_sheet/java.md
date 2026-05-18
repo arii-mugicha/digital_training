@@ -105,6 +105,9 @@ public class ClassName{
   }
   // parse
   private/public ClassName anotherConstructorName(values){}
+
+  // statics
+  static Datatype variable = value; // インスタンスを作成せずにアクセス可能なクラスフィールド
 }
 
 // instance
