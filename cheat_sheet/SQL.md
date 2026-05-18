@@ -237,6 +237,7 @@ TIME(time_string) /* -> HH:MM:SS (time_stringなしで現在時刻)*/
 'start of month'
 */
 STRFTIME('%Y...', string)
+DATE_TRUNC('month', column;)
 ```
 
 ## CHECK 制約
