@@ -151,3 +151,10 @@ Enumtype.values();
 // construct
 EnumName.valueOf("ArmName");
 ```
+
+# Random
+```java
+import java.util.Random;
+Random r = new Random();
+r.nextInt(i); // generate random Int between 0 to i;
+```
