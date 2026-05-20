@@ -14,6 +14,11 @@
 - ERP (Enterprise Resource Planning)
 - EDI (Electronic Data Interchange)
 - UML (Unified Model Language): 視覚的に構造振る舞いを表現するモデリング言語
+- CGM (Consumer generated Media)
+- NTP (Nrtwork Time Protocol)
+- Network News Transfer Protocol
+- Simple Mail Transfer Protocol
+- Simple Network Management Protocol
 
 - SRAM (Static RAM): Flip-Flop
 - DRAM : Main Memory
