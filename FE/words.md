@@ -12,10 +12,13 @@
 - SCM (Supply Chain Management)
 - CrM (Customer Relationship Management)
 - ERP (Enterprise Resource Planning)
+- EDI (Electronic Data Interchange)
+- UML (Unified Model Language): 視覚的に構造振る舞いを表現するモデリング言語
 
 - SRAM (Static RAM): Flip-Flop
 - DRAM : Main Memory
 - SDRAM: Synchrnous DRAM :DRAM
+- メモリインターリープ: 主記憶を分割して並行アクセス可能にする
 
 
 - システム管理基準
