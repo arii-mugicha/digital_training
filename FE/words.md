@@ -9,6 +9,13 @@
 - ODM (Original Design Manufaacturer)
 - IDM (Integrated Device Manufacturer)
 - SWOT分析 (Strength, Weakness, opportunity, Threat): 企業の経営戦略立案への分析
+- SCM (Supply Chain Management)
+- CrM (Customer Relationship Management)
+- ERP (Enterprise Resource Planning)
+
+- SRAM (Static RAM): Flip-Flop
+- DRAM : Main Memory
+- SDRAM: Synchrnous DRAM :DRAM
 
 
 - システム管理基準
