@@ -284,16 +284,57 @@ iterator.remove(); // 現在見ている要素を削除
 
 ## tips 
 ```java
-ユーザ名と最高スコアを出力
-		System.out.println(
-      userScoresList.entrySet().stream()
-        .map(entry -> Map.entry(
-          entry.getKey(), 
-          entry.getValue().stream().max(Integer::compareTo).orElse(0)
-        ))
-        .max(Comparator.comparing(Map.Entry::getValue))
-      	.get().getKey()
-    );
+//ユーザ名と最高スコアを出力
+System.out.println(
+	userScoresList.entrySet().stream()
+	.map(entry -> Map.entry(
+	entry.getKey(), 
+  	entry.getValue().stream().max(Integer::compareTo).orElse(0)
+	))
+	.max(Comparator.comparing(Map.Entry::getValue))
+	.get().getKey()
+);
+
+map.values().stream()
+	.map(v -> v.stream()
+		.mapToInt(x -> x)
+		.max().getAsInt())
+	.max(Comparator.naturalOrder())
+	.orElse(-1);
+
+maxMap.entrySet()
+	.stream()
+	.filter(entry -> entry.getValue() == max)
+	.map(Map.Entry::getKey)
+	.min(Comparator.naturalOrder())
+	.get();
 ```
 
 ## LinkedList
+```java
+LinkedList<type> list = new LinkedList<>;
+list.addFirst();
+list.addLast();
+list.getFirst();
+list.getLast();
+list.removeFirst();
+list.removeLast();
+```
+
+## Maps
+``` java
+HashMap // random order
+TreeMap // dictional order
+LinkedHashMap // additional order
+
+// required by HashMap
+int hashCode(){};
+boolean equals(Object o){};
+
+// required by TreeMap
+int compareTo(Object o){} // implements Comparable
+// OR
+int compare(Object o1, Object 02){}; // implements Comparator<Type>
+new TreeMap<>(new ImplementedComparatorClass)
+
+```
