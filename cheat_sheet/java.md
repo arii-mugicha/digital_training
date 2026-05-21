@@ -231,11 +231,14 @@ stream.collect(Collectors.toList()); // Stream<Datatype> to List<Datatype>
 stream.filter(func(stream_datatype)->bool);
 stream.distinct();
 stream.map(func(stream_datatype) -> new_stream_datatype);
+stream.reduce(init, (acc, val) -> return_value);
+stream.reduce((acc, val) -> return_val); // ->Optional<Datatype>
 
 // Optional
 stream.findFirst(); // -> Optional<Stream_datat_type>
 optional.isPresent(); // -> bool
 optional.orElse(v); // if !optional.isPresent() return v else
+optional.get(); // 中身がある前提で取り出す
 
 optional.ifPresent(func(val)); // if isPresent execute func
 // same as Stream, Optional can use filter, map, flatMap, orElseGet, orElseThrow
