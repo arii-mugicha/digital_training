@@ -192,6 +192,15 @@ import java.util.Map;
 import java.util.HashMap;
 
 Map<KeyType, ValueType> map = new HashMap<>();
+Map<KeyType, ValueType> map = new HashMap<>(){
+  {
+    put(key, val);
+    put(key, val);
+    ...
+  }
+};
+
+
 map.put(key, value);
 map.putIfAbsent(key, value);
 map.get(key); // if key is absent return null
