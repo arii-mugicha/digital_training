@@ -244,6 +244,20 @@ optional.ifPresent(func(val)); // if isPresent execute func
 // same as Stream, Optional can use filter, map, flatMap, orElseGet, orElseThrow
 ```
 
+## lambda式
+```java
+Runnable runnerName = (arguments) -> {
+	// process
+};
+runnerName.run()
+
+// method reference
+ClassName::methodName // static method
+instanceName::methodName // instance method
+
+map.forEach((key, value) -> {});
+```
+
 ## Iterator
 ```java
 // generate
