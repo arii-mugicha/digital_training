@@ -256,3 +256,18 @@ hashmap.values().iterator();
 
 iterator.remove(); // 現在見ている要素を削除
 ```
+
+
+## tips 
+```java
+ユーザ名と最高スコアを出力
+		System.out.println(
+      userScoresList.entrySet().stream()
+        .map(entry -> Map.entry(
+          entry.getKey(), 
+          entry.getValue().stream().max(Integer::compareTo).orElse(0)
+        ))
+        .max(Comparator.comparing(Map.Entry::getValue))
+      	.get().getKey()
+    );
+```
