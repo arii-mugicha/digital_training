@@ -172,6 +172,7 @@ List<RapperClass> list = new ArrayList<>();
 
 list.add(value);
 list.add(index, value);
+import java.util.Arrays;
 List<type> list = ArrayList<>(Arrays.asList(value1, ...)); // can add
 List<type> list = Arrays.asList(value1, ...); // cannot add
 
