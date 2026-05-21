@@ -184,7 +184,30 @@ list.remove(value); // -> boolean
 // list.remove(new Integer(1)); remove int
 list.clear();
 list1.addAll(list2); // not change list2
+```
 
+## Map
+```java
+import java.util.Map;
+import java.util.HashMap;
+
+Map<KeyType, ValueType> map = new HashMap<>();
+map.put(key, value);
+map.putIfAbsent(key, value);
+map.get(key); // if key is absent return null
+map.getOrDefault(key, default);
+map.size();
+map.containsKey(key);
+map.containsValue(value);
+map1.putAll(map2); // map2 is not changed
+map.remove(key);
+map.clear();
+
+map.keySet(); // -> Set<KeyType>
+map.values(); // -> Collection<ValueType>
+map.entrySet(); // -> Map.Entry<key, value>
+map_entry.getKey(); 
+map_entry.getValue(); 
 ```
 
 ## Stream API
