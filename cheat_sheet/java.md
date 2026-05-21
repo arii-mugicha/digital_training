@@ -158,3 +158,24 @@ import java.util.Random;
 Random r = new Random();
 r.nextInt(i); // generate random Int between 0 to i;
 ```
+
+# Stream API
+```java
+list.stream(); // List<Datatype> to Stream<Datatype> (java.util.stream.Stream)
+
+import java.util.stream.Collectors;
+stream.collect(Collectors.toList()); // Stream<Datatype> to List<Datatype>
+
+// method -> Stream
+stream.filter(func(stream_datatype)->bool);
+stream.distinct();
+stream.map(func(stream_datatype) -> new_stream_datatype);
+
+// Optional
+stream.findFirst(); // -> Optional<Stream_datat_type>
+optional.isPresent(); // -> bool
+optional.orElse(v); // if !optional.isPresent() return v else
+
+optional.ifPresent(func(val)); // if isPresent execute func
+// same as Stream, Optional can use filter, map, flatMap, orElseGet, orElseThrow
+```
