@@ -168,6 +168,7 @@ import java.util.ArrayList(); // Class
 
 // generate
 List<RapperClass> list = new ArrayList<>();
+List<RapperClass> list = new ArrayList<>(capacity);
 
 
 list.add(value);
@@ -294,3 +295,5 @@ iterator.remove(); // 現在見ている要素を削除
       	.get().getKey()
     );
 ```
+
+## LinkedList
