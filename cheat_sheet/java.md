@@ -258,6 +258,15 @@ instanceName::methodName // instance method
 map.forEach((key, value) -> {});
 ```
 
+```java
+// Comarable Interface
+interface Compareable{
+	int CompareTo(T o){} // 引数が自分より大きいときに正,小さいときに負、同じで0
+}
+
+list.sort(null); // ListArgumentDatatype::compareTo
+```
+
 ## Iterator
 ```java
 // generate
