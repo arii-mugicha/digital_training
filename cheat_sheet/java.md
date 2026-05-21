@@ -159,7 +159,35 @@ Random r = new Random();
 r.nextInt(i); // generate random Int between 0 to i;
 ```
 
-# Stream API
+# Collection
+
+## List
+```java
+import java.util.List(); // Interface
+import java.util.ArrayList(); // Class
+
+// generate
+List<RapperClass> list = new ArrayList<>();
+
+
+list.add(value);
+list.add(index, value);
+List<type> list = ArrayList<>(Arrays.asList(value1, ...)); // can add
+List<type> list = Arrays.asList(value1, ...); // cannot add
+
+list.get(index);
+list.indexOf();
+list.size();
+list.set(index, value);
+list.remove(index); // -> removed_value
+list.remove(value); // -> boolean
+// list.remove(new Integer(1)); remove int
+list.clear();
+list1.addAll(list2); // not change list2
+
+```
+
+## Stream API
 ```java
 list.stream(); // List<Datatype> to Stream<Datatype> (java.util.stream.Stream)
 
@@ -178,4 +206,17 @@ optional.orElse(v); // if !optional.isPresent() return v else
 
 optional.ifPresent(func(val)); // if isPresent execute func
 // same as Stream, Optional can use filter, map, flatMap, orElseGet, orElseThrow
+```
+
+## Iterator
+```java
+// generate
+list.iterator();
+iterator.hasNext(); // -> bool;
+iterator.next(); // -> iterator_datatype
+
+hashmap.keySet().iterator();
+hashmap.values().iterator();
+
+iterator.remove(); // 現在見ている要素を削除
 ```
