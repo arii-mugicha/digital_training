@@ -448,3 +448,12 @@ pstmt.setInt(1, age); // set first ? to age;
 pstmt.setStrin(index, string);
 pstmt.setNull(index, Types.NULL);
 ```
+
+### DatabaseMetaData
+```
+DatabaseMetadata dmd = connection.getMetaData();
+String dmname = dmd.getDatabaseProduceName();
+String version = dmd.getDatabaseProductVersion();
+ResultSet rs = dmd.getTypeInfo(); 
+rs.getString("TYPE_NAME"); // supported type info
+```
