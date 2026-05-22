@@ -31,13 +31,38 @@ datatype variable = value;
 datatype[] variable = new datatype[length];
 datatype[] variable = new datatype[] {arg1, arg2, ...};
 int length = array.length;
+```
 
+## 文字列
+```java
 //文字列結合
 str 1 + str2;
 
 // 文字列分割
 string.split("sepalater");
 string.split(""); // 一文字ずつ
+
+// index access
+string.charAt(index);
+
+string.equals(anotherString);
+int comp = str1.compareTo(); // str1 < str2 -> minus (辞書順)
+int comp = st1.compareToIgnoreCase();
+string.startsWight(prefix [, offset]);
+string.endsWith(suffix);
+string.contains(substr);
+string.indexOf(substr [, offset]);
+string.lastIndexOf(substr);
+
+String(char[]); // join without space
+String(int[] codePoint, int offset, int count); // offset:部分文字列開始位置 count:文字列長
+string.chars().toArray(); // -> int[]
+string.chars().forEach();
+(char)i // -> char
+
+// char
+char.isDigit(c); // if c is number(digit) return true
+char1 == char2;
 ```
 
 # データ型
@@ -405,7 +430,7 @@ Class.forName(drivername); // "org.sqlite.JDBC", "com.mysql.jdbc.Driver", "org.p
 // define url
 String url = "jdbc:protocol:information"; // "jdbc:sqlite:db_path"
 // connect DB
-Connection connection= DriverManager.fetConnection(url);
+Connection connection= DriverManager.getConnection(url);
 try{
 // execute SQL
 	PreparedStatement pstmt = connection.prepareStatement("SQL Instruction");
