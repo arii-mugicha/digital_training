@@ -72,6 +72,7 @@ string.chars().forEach();
 // char
 char.isDigit(c); // if c is number(digit) return true
 char1 == char2;
+Character.toUpperCase(c);
 
 //String builder
 StringBuilder builder = new StringBuilder("");
