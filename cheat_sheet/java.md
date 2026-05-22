@@ -53,6 +53,15 @@ string.endsWith(suffix);
 string.contains(substr);
 string.indexOf(substr [, offset]);
 string.lastIndexOf(substr);
+string.replace(beforePattern, afterPattern);
+string.substring(startIndex, endIndex);
+
+string.trim();
+string.strip();
+string.stripLeading();
+string.stripTeailing();
+
+String.join("concatinator", String[]);
 
 String(char[]); // join without space
 String(int[] codePoint, int offset, int count); // offset:部分文字列開始位置 count:文字列長
@@ -63,6 +72,9 @@ string.chars().forEach();
 // char
 char.isDigit(c); // if c is number(digit) return true
 char1 == char2;
+
+//String builder
+StringBuilder builder = new StringBuilder("");  
 ```
 
 # データ型
