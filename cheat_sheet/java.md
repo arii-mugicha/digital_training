@@ -74,7 +74,13 @@ char.isDigit(c); // if c is number(digit) return true
 char1 == char2;
 
 //String builder
-StringBuilder builder = new StringBuilder("");  
+StringBuilder builder = new StringBuilder("");
+builder.append("appendix");
+builder.insert(index, appendix);
+builder.deleteCharAt(index);
+builder.delete(startIndex, endIndex);
+builder.setCharAt(index, char);
+builder.replace(startIndex, endIndex, string);
 ```
 
 # データ型
