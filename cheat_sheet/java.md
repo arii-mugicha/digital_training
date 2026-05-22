@@ -81,6 +81,12 @@ Boolean.parseBoolean(value);
 (datatype)value
 Integer.toString(int);
 String s = String.valueOf(value);
+String.fomat("%f.n", doubleNumber);
+String.fomat("%num$s %num$s", repeatedString);
+String.fomat("%aNx", val); // a形式でN桁のxを表示
+// a '0':0埋め, ' ':右揃え, '-':左揃え,   N:N桁右揃え, .N:最大N桁
+String.fomat("%,d", num); // ,区切り整数
+
 Character.geteNumericValue();
 ```
 
