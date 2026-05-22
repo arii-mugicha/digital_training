@@ -427,3 +427,24 @@ try (
 )
 
 ```
+
+### Execute Query
+```java
+preparedStatement.executeQuery();
+preparedStatement.executeUpdate(); // update like query
+
+
+rs.getString(index); // index starts with 1;
+rs.getString(columnName);
+rs.getInt(indexOrColumnName); // return default 0
+rs.getShort();
+rs.getLong();
+re.getBoolean();
+
+// execution text generate
+String sql = "select * from users where age > ?";
+PrepareSatatement pstmt = connection.prepareStatement(sql);
+pstmt.setInt(1, age); // set first ? to age;
+pstmt.setStrin(index, string);
+pstmt.setNull(index, Types.NULL);
+```
