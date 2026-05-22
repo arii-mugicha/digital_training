@@ -439,9 +439,35 @@ assert boolean; // if false throw AssertionError
 
 ## FileIO
 ```java
-import java.nio.file.Files;
 import java.io.File;
-import java.io.IOException;
+
+// File insatance
+new File("path/to/file.ext");
+new File(file, "path/to/file.ext"); // first file is dir
+
+// file methods
+file.exists();
+file.isFile();
+file.isDiretory();
+file.length(); // return long: size of file (bytes)
+file.lastModified(); // return long: file createdTime milisec
+
+// make file
+file.makedir();
+file.makedirs(); // create also parent directory
+
+// path <-> file
+import java.nio.file.Path;
+file.toPath();
+path.toFile();
+
+// path
+path.toAbsolutePath();
+import java.nio.file.Paths;
+Path path = Paths.get("pathString"); // 指定したパスからの相対パス 直接パスを作成できる
+path.getParent();
+dirfile.resolve(file);
+
 // FileReading
 Files.readAllBytes(file.toPath(), encoding);
 ```
