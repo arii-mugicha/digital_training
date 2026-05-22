@@ -456,4 +456,16 @@ String dmname = dmd.getDatabaseProduceName();
 String version = dmd.getDatabaseProductVersion();
 ResultSet rs = dmd.getTypeInfo(); 
 rs.getString("TYPE_NAME"); // supported type info
+ResultSet rs = dmd.getTables(
+  String catalog, // null
+  String schemaPattern, // null
+  String tableNamePattern, // "%"
+  String[] types // null
+);
+ResultSet rs = dmd.getColumns(
+  String catalog,
+  String schemaPattern,
+  String tableNamePattern,
+  String[] types
+);
 ```
