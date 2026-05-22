@@ -338,3 +338,61 @@ int compare(Object o1, Object 02){}; // implements Comparator<Type>
 new TreeMap<>(new ImplementedComparatorClass)
 
 ```
+
+## Collections
+```java
+Collections.addAll(list, element1, element2, ...);
+
+Collections.unmodifiableList(list); // immutable list
+Collections.synchronizedList(list);
+Collections.unmodifiableMap(map); // immutable map
+Collections.synchronizedMap(map);
+```
+
+
+# 例外処理
+## Excecption
+```java
+try {
+	// do something
+} catch (ExceptionName e){
+	e.printStackTrace();
+} catch (ExcptionName1 e1 | ExcptionName2 e2){...
+} finally {
+	// do NOT return
+}
+
+// try-with-resource
+try (datatype valiable = initialCoding){} // 対象リソースを解放
+
+// Exception
+Exception // somtime anti-pattren
+IOException
+NoSuchFileException
+UnsupportedEncodingException
+ArithmetixException
+NullPointerException
+ArrayIndexOutOfBoundsException
+IllegalArgumentException
+
+methodNames() throws ExceptionName{};
+throw new ExceptionName();
+```
+## Error
+```java
+OutOfMemoryError
+StackOverflowError
+
+// assertion;
+assert boolean; // if false throw AssertionError
+```
+
+## FileIO
+```java
+import java.nio.file.Files;
+import java.io.File;
+import java.io.IOException;
+// FileReading
+Files.readAllBytes(file.toPath(), encoding);
+```
+
