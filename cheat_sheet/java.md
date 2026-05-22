@@ -396,3 +396,34 @@ import java.io.IOException;
 Files.readAllBytes(file.toPath(), encoding);
 ```
 
+## JDBC
+```java
+import java.sql.*;
+
+// load Driver
+Class.forName(drivername); // "org.sqlite.JDBC", "com.mysql.jdbc.Driver", "org.postgresql.Driver"
+// define url
+String url = "jdbc:protocol:information"; // "jdbc:sqlite:db_path"
+// connect DB
+Connection connection= DriverManager.fetConnection(url);
+try{
+// execute SQL
+	PreparedStatement pstmt = connection.prepareStatement("SQL Instruction");
+	ResultSet rs = pstmt.executeQuery();
+	// show
+	while (rs.next()) {
+		Syste.out.prinltn(rs.getString(index)...)
+	}
+	// rs.close()
+	// pstmt.close()
+} finally {
+	connection.close();
+}
+
+// try-with-resourceは複数の宣言も可能
+try (
+	statement1;
+	statement2;
+)
+
+```
