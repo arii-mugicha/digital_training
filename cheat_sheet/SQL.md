@@ -229,6 +229,7 @@ CURRENT_DATE /* -> YYYY-MM-DD*/
 -- 第二引数を取れる
 DATETIME(date_string) /* -> YYYY-MM-DD HH:MM:SS (nowを使える)*/
 DATE(date_string) /* -> YYYY:MM:DD */
+DATE(date, 'start of manth'); /* 月の初日 */
 TIME(time_string) /* -> HH:MM:SS (time_stringなしで現在時刻)*/
 /*
 第二引数
