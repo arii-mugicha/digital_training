@@ -469,7 +469,17 @@ path.getParent();
 dirfile.resolve(file);
 
 // FileReading
-Files.readAllBytes(file.toPath(), encoding);
+import java.nio.file.Files;
+Files.readAllBytes(file.toPath(), encoding); // FileIOにはFileよりもFilesが便利
+
+import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileTime;
+
+BasicFileAttributes attr = Files.readAttributes(Path, BasicFileAttributes.class); // 第二引数は読み取るべきファイル属性のクラス
+attr.creationTime();
+attr.lastModifiedTime();
+attr.isRegularFile(); // return boolean
+attr.size(); // return long bytes	
 ```
 
 ## JDBC
