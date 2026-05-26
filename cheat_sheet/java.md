@@ -479,7 +479,11 @@ BasicFileAttributes attr = Files.readAttributes(Path, BasicFileAttributes.class)
 attr.creationTime();
 attr.lastModifiedTime();
 attr.isRegularFile(); // return boolean
-attr.size(); // return long bytes	
+attr.size(); // return long bytes
+
+// Files
+Files.createDirectories(pathToDeepDirectory);
+File.listFiles();
 ```
 
 ## JDBC
