@@ -257,3 +257,426 @@ INSERT INTO table (columns) /* 最初のカラムから順に評価する */
 SELECT columns,...
 WHERE
 ```
+
+
+# Subquery (Copilot)
+# SQLite サブクエリ チートシート
+
+## サブクエリとは
+
+SQL文の中に埋め込む `SELECT` 文です。
+
+```sql
+SELECT *
+FROM users
+WHERE id = (
+    SELECT user_id
+    FROM profiles
+    WHERE email = 'test@example.com'
+);
+```
+
+実行順序
+
+```text
+1. サブクエリ実行
+2. 結果取得
+3. 外側のクエリ実行
+```
+
+---
+
+# 1. WHERE句で使用する
+
+## 単一値を返すサブクエリ
+
+平均価格以上の商品を取得
+
+```sql
+SELECT *
+FROM product
+WHERE price > (
+    SELECT AVG(price)
+    FROM product
+);
+```
+
+比較演算子
+
+```sql
+=
+<>
+>
+<
+>=
+<=
+```
+
+---
+
+# 2. IN句で使用する
+
+## 複数行を返すサブクエリ
+
+注文履歴のある顧客を取得
+
+```sql
+SELECT *
+FROM customer
+WHERE id IN (
+    SELECT customer_id
+    FROM orders
+);
+```
+
+---
+
+## NOT IN
+
+注文履歴のない顧客を取得
+
+```sql
+SELECT *
+FROM customer
+WHERE id NOT IN (
+    SELECT customer_id
+    FROM orders
+);
+```
+
+### NULL対策
+
+```sql
+SELECT *
+FROM customer
+WHERE id NOT IN (
+    SELECT customer_id
+    FROM orders
+    WHERE customer_id IS NOT NULL
+);
+```
+
+---
+
+# 3. EXISTSを使用する
+
+## 関連データが存在する
+
+注文履歴がある顧客
+
+```sql
+SELECT *
+FROM customer c
+WHERE EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+);
+```
+
+---
+
+## 関連データが存在しない
+
+注文履歴がない顧客
+
+```sql
+SELECT *
+FROM customer c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+);
+```
+
+---
+
+# 4. SELECT句で使用する
+
+顧客ごとの注文数を表示
+
+```sql
+SELECT
+    c.id,
+    c.name,
+    (
+        SELECT COUNT(*)
+        FROM orders o
+        WHERE o.customer_id = c.id
+    ) AS order_count
+FROM customer c;
+```
+
+結果例
+
+```text
+id | name   | order_count
+---+--------+------------
+1  | Tanaka | 5
+2  | Sato   | 2
+```
+
+---
+
+# 5. FROM句で使用する
+
+## 仮想テーブルを作成
+
+顧客ごとの購入金*を集計
+
+```sql
+SELECT *
+FROM (
+    SE*ECT
+        customer_id,
+        S*M(amount) AS total_amount
+    FROM*orders
+    GROUP BY customer_id
+) *
+WHERE t.total_amount >= 10000;
+``*
+
+イメージ
+
+```text
+orders
+   ↓
+GROUP *Y
+   ↓
+仮想テーブル
+  *↓
+検索
+```
+
+---
+
+# 6. 相関サブクエ*
+
+## 外側のテーブルを参照する*
+顧客ごとの平均購入額以上の注文を*得
+
+```sql
+SELECT *
+FROM orders o1
+*HERE amount >= (
+    SELECT AVG(am*unt)
+    FROM orders o2
+    WHERE *2.customer_id =*o1.customer_id
+);
+```
+
+特徴
+
+```text*外側の行ごとにサブクエリが実行され*
+↓
+大量データでは遅*なりやすい
+```
+
+---
+
+# *. MAX/M*N取得
+
+## 最新データ取得
+
+最新注文
+
+```sql
+SELE*T *
+FROM orders
+WHERE order_date =*(
+    SELECT MAX(order_date)
+    F*OM orders
+);
+```
+
+---
+
+## 最大値取得
+
+最*額商品
+
+```sql
+SELECT *
+FROM product
+*HERE price = (
+    SELECT MAX(pric*)
+    FROM product
+);
+```
+
+---
+
+# 8. HAVING句で使用する
+
+顧客ごとの注文回数が平均以上
+
+```sql
+SELECT
+    customer_id,
+    COUNT(*) AS order_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(*) >= (
+    SELECT AVG(cnt)
+    FROM (
+        SELECT COUNT(*) AS cnt
+        FROM orders
+        GROUP BY customer_id
+    )
+);
+```
+
+---
+
+# 9. JOINへの書き換え
+
+## サブクエリ版
+
+```sql
+SELECT *
+FROM customer
+WHERE id IN (
+    SELECT customer_id
+    FROM orders
+);
+```
+
+## JOIN版
+
+```sql
+SELECT DISTINCT c.*
+FROM customer c
+INNER JOIN orders o
+    ON c.id = o.customer_id;
+```
+
+---
+
+# 10. 実務でよく使うパターン
+
+## 平均以上
+
+```sql
+SELECT *
+FROM product
+WHERE price > (
+    SELECT AVG(price)
+    FROM product
+);
+```
+
+---
+
+## 存在確認
+
+```sql
+SELECT *
+FROM customer c
+WHERE EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+);
+```
+
+---
+
+## 存在しない確認
+
+```sql
+SELECT *
+FROM customer c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+);
+```
+
+---
+
+## IN検索
+
+```sql
+SELECT *
+FROM customer
+WHERE id IN (
+    SELECT customer_id
+    FROM orders
+);
+```
+
+---
+
+## 集計結果を仮想テーブル化
+
+```sql
+SELECT *
+FROM (
+    SELECT
+        customer_id,
+        SUM(amount) AS total_amount
+    FROM orders
+    GROUP BY customer_id
+) t;
+```
+
+---
+
+# サブクエリ選択指針
+
+| やりたいこと | 推奨 |
+|-------------|------|
+| 存在確認 | EXISTS |
+| 存在しない確認 | NOT EXISTS |
+| 値との比較 | スカラーサブクエリ |
+| 一覧との比較 | IN |
+| 集計結果の再利用 | FROM句サブクエリ |
+| 可読性重視の複雑なSQL | CTE(WITH句) |
+| データ取得中心 | JOIN |
+
+---
+
+# 覚えておくべき構文
+
+```sql
+-- 単一値
+WHERE price > (
+    SELECT AVG(price)
+    FROM product
+)
+
+-- 複数値
+WHERE id IN (
+    SELECT customer_id
+    FROM orders
+)
+
+-- 存在確認
+WHERE EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+)
+
+-- 存在しない確認
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM orders o
+    WHERE o.customer_id = c.id
+)
+
+-- 仮想テーブル
+FROM (
+    SELECT *
+    FROM orders
+) t
+
+-- 相関サブクエリ
+WHERE amount >= (
+    SELECT AVG(amount)
+    FROM orders o2
+    WHERE o2.customer_id = o1.customer_id
+)
+```
