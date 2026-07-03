@@ -559,3 +559,15 @@ ResultSet rs = dmd.getColumns(
   String[] types
 );
 ```
+# input function
+``` java
+  private static String[] getStdin() throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in), 1_048_576);
+    ArrayList<String> lines = new ArrayList<>();
+    String line;
+    while ((line = br.readLine()) != null) {
+      lines.add(line);
+    }
+    return lines.toArray(new String[lines.size()]);
+  }
+```
